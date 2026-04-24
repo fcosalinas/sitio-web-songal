@@ -359,4 +359,8 @@ function Field({
         required={required}
         placeholder={placeholder}
         className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/15 text-white placeholder-surmetric-gray-500 focus:outline-none focus:ring-2 focus:ring-surmetric-teal focus:border-transparent transition"
+      />
+    </div>
+  );
+}
    
