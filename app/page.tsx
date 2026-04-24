@@ -1,21 +1,21 @@
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Nosotros from "./components/Nosotros";
-import Propuesta from "./components/Propuesta";
-import Servicios from "./components/Servicios";
-import Contacto from "./components/Contacto";
+import ValueProps from "./components/ValueProps";
+import Services from "./components/Services";
+import WhyUs from "./components/WhyUs";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Header />
       <main>
         <Hero />
-        <Nosotros />
-        <Propuesta />
-        <Servicios />
-        <Contacto />
+        <ValueProps />
+        <Services />
+        <WhyUs />
+        <Contact />
       </main>
       <Footer />
     </>

@@ -1,72 +1,58 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight } from "next/font/google";
+import { Fraunces, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const fraunces = Fraunces({
+  variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  axes: ["SOFT", "WONK", "opsz"],
 });
 
-const interTight = Inter_Tight({
-  variable: "--font-inter-tight",
+const geist = Geist({
+  variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["600", "700"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.surmetric.cl"),
-  title: {
-    default: "Surmetric SpA — Ingeniería en Estrategia Tecnológica",
-    template: "%s | Surmetric SpA",
-  },
+  title: "Surmetric — Tecnología que impulsa negocios",
   description:
-    "Transformamos la complejidad tecnológica en claridad estratégica. Consultoría y arquitectura técnica para la industria 4.0 en el sur de Chile: arquitectura de datos, estrategia de producto técnico y optimización operativa con IA.",
+    "Hacemos que la tecnología trabaje para ti, no al revés. Modernización, automatización e IA para empresas que quieren crecer sin complicaciones.",
   keywords: [
-    "Surmetric",
     "consultoría tecnológica",
-    "industria 4.0",
-    "arquitectura de datos",
+    "automatización",
+    "inteligencia artificial",
     "Symdat",
-    "Business Intelligence",
+    "BI",
+    "Surmetric",
     "transformación digital",
-    "sur de Chile",
-    "estrategia tecnológica",
+    "Chile",
   ],
   authors: [{ name: "Surmetric SpA" }],
-  creator: "Surmetric SpA",
   openGraph: {
+    title: "Surmetric — Tecnología que impulsa negocios",
+    description:
+      "Hacemos que la tecnología trabaje para ti, no al revés. Sin humo, sin tecnicismos.",
     type: "website",
     locale: "es_CL",
-    url: "https://www.surmetric.cl",
-    siteName: "Surmetric SpA",
-    title: "Surmetric SpA — Ingeniería en Estrategia Tecnológica",
-    description:
-      "Transformamos la complejidad tecnológica en claridad estratégica. Consultoría y arquitectura técnica para la industria 4.0.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Surmetric SpA — Ingeniería en Estrategia Tecnológica",
-    description:
-      "Transformamos la complejidad tecnológica en claridad estratégica.",
-  },
-  robots: {
-    index: true,
-    follow: true,
+    siteName: "Surmetric",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="es"
-      className={`${inter.variable} ${interTight.variable} h-full`}
-    >
-      <body className="min-h-full flex flex-col antialiased bg-white text-surmetric-dark">
+    <html lang="es">
+      <body
+        className={`${fraunces.variable} ${geist.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
