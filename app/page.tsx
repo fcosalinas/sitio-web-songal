@@ -1,8 +1,8 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Nosotros from "./components/Nosotros";
+import Propuesta from "./components/Propuesta";
 import Servicios from "./components/Servicios";
-import Proyectos from "./components/Proyectos";
 import Contacto from "./components/Contacto";
 import Footer from "./components/Footer";
 
@@ -13,8 +13,8 @@ export default function Home() {
       <main>
         <Hero />
         <Nosotros />
+        <Propuesta />
         <Servicios />
-        <Proyectos />
         <Contacto />
       </main>
       <Footer />
