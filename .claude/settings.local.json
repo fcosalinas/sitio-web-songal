@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Vercel__list_teams",
+      "mcp__claude_ai_Vercel__get_deployment_build_logs",
+      "Bash(npx tsc *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "mcp__claude_ai_Vercel__deploy_to_vercel",
+      "mcp__claude_ai_Vercel__list_deployments",
+      "Bash(git pull *)",
+      "Bash(cp \"C:/Users/Admn/OneDrive/Surmetric/Sitio Web/sitio-web-update/sitio-web/public/logo-lockup-full.png\" \"C:/Users/Admn/CascadeProjects/surmetric-web/public/logo-lockup-full.png\")",
+      "Bash(cp \"C:/Users/Admn/OneDrive/Surmetric/Sitio Web/sitio-web-update/sitio-web/public/logo-lockup-white.png\" \"C:/Users/Admn/CascadeProjects/surmetric-web/public/logo-lockup-white.png\")",
+      "Bash(cp \"C:/Users/Admn/OneDrive/Surmetric/Sitio Web/sitio-web-update/sitio-web/public/favicon-isotipo.png\" \"C:/Users/Admn/CascadeProjects/surmetric-web/public/favicon-isotipo.png\")",
+      "Bash(npm run *)",
+      "Bash(git checkout *)",
+      "Bash(grep -E \"\\\\.\\(png|ico|webmanifest\\)$\")",
+      "Bash(grep -E \"\\\\.\\(ico|png|webmanifest\\)$\")",
+      "Bash(git commit *)"
+    ]
+  }
+}
