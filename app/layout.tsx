@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Rubik } from "next/font/google";
+import { Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
-const rubik = Rubik({
+const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const rubikDisplay = Rubik({
+const interDisplay = Inter({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["600", "700", "800", "900"],
@@ -68,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${rubik.variable} ${rubikDisplay.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${interDisplay.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
