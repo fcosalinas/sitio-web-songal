@@ -59,7 +59,7 @@ export default function Footer() {
               <li>www.surmetric.cl</li>
               <li>Sur de Chile · Atención remota y presencial</li>
               <li className="pt-3 text-sm text-white/60">
-                Producto propio: Symdat — Business Intelligence
+                Producto propio: Surdat — Business Intelligence
               </li>
             </ul>
           </div>
@@ -67,7 +67,15 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-4 text-sm text-white/60">
           <p>© {new Date().getFullYear()} Surmetric SpA. Todos los derechos reservados.</p>
-          <p className="font-display italic">Tecnología con propósito.</p>
+          <div className="flex items-center gap-6">
+            <a
+              href="/privacidad"
+              className="hover:text-brand-teal transition-colors"
+            >
+              Política de privacidad
+            </a>
+            <p className="font-display italic">Tecnología con propósito.</p>
+          </div>
         </div>
       </div>
     </footer>
