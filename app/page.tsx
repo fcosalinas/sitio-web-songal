@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ValueProps from "./components/ValueProps";
 import Services from "./components/Services";
+import Portfolio from "./components/Portfolio";
 import WhyUs from "./components/WhyUs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <ValueProps />
         <Services />
+        <Portfolio />
         <WhyUs />
         <Contact />
       </main>

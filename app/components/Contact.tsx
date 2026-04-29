@@ -1,11 +1,4 @@
-const SERVICE_OPTIONS = [
-  { value: "", label: "Seleccione una línea de servicio" },
-  { value: "datos", label: "Ordenar mi información (Datos / BI)" },
-  { value: "software", label: "Modernizar mi operación (Software a medida)" },
-  { value: "automatizacion", label: "Automatizar con IA" },
-  { value: "symdat", label: "Symdat (Business Intelligence)" },
-  { value: "otro", label: "Otro / No estoy seguro" },
-];
+import WhatsAppMenu from "./WhatsAppMenu";
 
 const WA_LINK =
   "https://wa.me/56984184979?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios";
@@ -90,42 +83,9 @@ export default function Contact() {
             </dl>
           </div>
 
-          {/* Columna derecha: CTA WhatsApp */}
+          {/* Columna derecha: menú de atención al cliente */}
           <div className="lg:col-span-7 lg:pl-8">
-            <div className="bg-brand-gray-50 p-8 lg:p-10 rounded-2xl border border-brand-gray-100 flex flex-col items-center justify-center text-center min-h-[320px] gap-6">
-              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366]/10">
-                <WhatsAppIcon size={32} color="#25D366" />
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="font-display text-2xl text-brand-dark">
-                  La forma más rápida de contactarnos
-                </h3>
-                <p className="text-brand-dark/60 text-base leading-relaxed max-w-sm">
-                  Escríbenos directamente y te respondemos a la brevedad.
-                </p>
-              </div>
-
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white font-medium rounded-full hover:bg-[#1ebe5d] transition-all duration-300 shadow-lg shadow-[#25D366]/20 hover:shadow-[#25D366]/40 hover:-translate-y-0.5"
-              >
-                <WhatsAppIcon size={20} color="white" />
-                Escríbenos por WhatsApp
-              </a>
-
-              <p className="text-sm text-brand-dark/40">
-                ¿Prefieres el correo?{" "}
-                <a
-                  href="mailto:contacto@surmetric.cl"
-                  className="text-brand-dark/60 hover:text-brand-teal underline underline-offset-2 transition-colors"
-                >
-                  contacto@surmetric.cl
-                </a>
-              </p>
-            </div>
+            <WhatsAppMenu />
           </div>
         </div>
       </div>
