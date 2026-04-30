@@ -1,4 +1,4 @@
-# CLAUDE.md — Repo `sitio-web` (surmetric.cl)
+# CLAUDE.md — Repo `surmetric-web` (surmetric.cl)
 
 > Archivo guía para Claude Code, Claude Cowork y cualquier asistente IA
 > que trabaje sobre este repositorio. Renómbralo a `CLAUDE.md` al
@@ -8,7 +8,7 @@
 
 ## 1. Identidad del repo
 
-- **Nombre actual del paquete**: `sitio-web` (deuda menor de naming, no urgente)
+- **Nombre del paquete**: `surmetric-web` (renombrado en v7, abril 2026)
 - **Función**: sitio comercial de Surmetric SpA, captación de prospects, presentación de servicios
 - **Producto**: Surmetric (consultoría)
 - **Hosting**: Vercel plan Hobby — ver §10, deuda P6
@@ -120,7 +120,7 @@ Esto es operacionalización de **P5** y de ADR-0004.
 
 ---
 
-## 5. Directrices aplicables (referencias al documento maestro v6)
+## 5. Directrices aplicables (referencias al documento maestro v7)
 
 | Código | Nombre corto | Cuándo se activa en este repo |
 |---|---|---|
@@ -134,8 +134,9 @@ Esto es operacionalización de **P5** y de ADR-0004.
 | **C3** | Branding oficial Surmetric | **Crítica para este repo** — todo visual |
 | **S2** | Ley 21.719 como piso | **Crítica si hay formularios** |
 | **E1** | CostWatcher antes de escalar IA | Si se integra IA en el sitio (chatbot, etc.) |
+| **M1** | Posicionamiento nacional y multisectorial (nueva en v7) | **Crítica para este repo** — todo copy y metadata |
 
-**Detalle completo**: ver `Surmetric_Arquitectura_y_Directrices_v6.docx` en Notion.
+**Detalle completo**: ver `Surmetric_Arquitectura_y_Directrices_v7.docx` en OneDrive.
 
 ---
 
@@ -205,8 +206,8 @@ Cuando se active Fase 3 (ADR-0002):
 
 | Deuda / Decisión pendiente | Origen | Estado |
 |---|---|---|
-| Posición sobre Vercel Hobby vs Pro vs migración a Render | P6, doc v6 §3.2 | Decisión agendada semana 1 plan v6 |
-| `name: "sitio-web"` debería ser `surmetric-web` | P5 | Cambio menor, no urgente |
+| Posición sobre Vercel Hobby vs Pro vs migración a Render | P6, doc v7 §3.2 | Decisión agendada semana 1 plan v6 |
+| ~~`name: "sitio-web"` debería ser `surmetric-web`~~ | P5 | **Resuelto en v7 (abril 2026)** |
 | Política de privacidad alineada Ley 21.719 si hay formularios | S2 | Pendiente cuando se agregue primer formulario con datos |
 | Linter sin reglas custom — preset Next.js | Decisión consciente, no deuda | OK |
 | Sin tests automatizados | Decisión consciente para sitio marketing | OK |
@@ -215,7 +216,7 @@ Cuando se active Fase 3 (ADR-0002):
 
 ## 11. Referencias
 
-- **Documento maestro**: `Surmetric_Arquitectura_y_Directrices_v6.docx`
+- **Documento maestro**: `Surmetric_Arquitectura_y_Directrices_v7.docx` (en `OneDrive/Surmetric/`)
 - **Plan implementación governance**: `Surmetric_Plan_Implementacion_Governance_12_semanas.docx`
 - **ADRs aplicables**:
   - ADR-0001: Stack multi-cloud (justifica Vercel separado de Render)
@@ -229,4 +230,5 @@ Cuando se active Fase 3 (ADR-0002):
 ## 12. Versión del archivo
 
 - **v1.0** — 27 abril 2026 — versión inicial alineada con documento maestro v6
+- **v1.1** — 30 abril 2026 — reposicionamiento nacional/multisectorial (alineada con doc maestro v7); incorpora directriz M1; rename de paquete `sitio-web` → `surmetric-web`
 - Cada cambio se commitea como `docs(claude-md): ...` con referencia al ADR que lo motiva.
