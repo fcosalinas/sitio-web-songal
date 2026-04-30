@@ -19,8 +19,10 @@
 
 ## 2. Contexto mínimo que Claude debe respetar
 
-- **Empresa**: Surmetric SpA, consultora chilena de ingeniería en estrategia tecnológica, 2 socios, sur de Chile
-- **Audiencia del sitio**: gerentes y dueños de empresas industriales en Chile/LatAm que evalúan transformación digital, BI, automatización, arquitectura técnica
+- **Empresa**: Surmetric SpA, consultora chilena de ingeniería en estrategia tecnológica, 2 socios. Origen sureño como atributo de identidad, **no como límite comercial** — la empresa opera con cobertura nacional.
+- **Posicionamiento (vigente abril 2026)**: consultora tecnológica y analítica B2B con alcance nacional y capacidad multisectorial. Servicios: datos, automatización, IA, software a medida e integración. Sectores objetivo: servicios, industria, agro, logística, comercio y operaciones complejas. Origen del cambio: revisión de socios documentada en `surmetric_textos_posicionamiento.docx` (OneDrive › Surmetric › Sitio Web).
+- **Lo que el sitio NO debe decir**: "PYMEs del sur de Chile", "negocios del sur", "consultoría regional", "tecnología cercana para empresas del sur" u otras formulaciones que encasillen a Surmetric en una geografía o tamaño de cliente acotado. Si Claude detecta este lenguaje en propuestas, copy o metadata, debe reescribirlo manteniendo identidad cercana pero alcance nacional/multisectorial.
+- **Audiencia del sitio**: gerentes y dueños de empresas chilenas de distintas industrias que evalúan transformación digital, BI, automatización, arquitectura técnica
 - **Productos a comunicar**:
   - Servicios de consultoría Surmetric (arquitectura de datos, estrategia de producto técnico, optimización con IA)
   - Surdat (SaaS BI por módulos) — actualmente con cliente único Top Reman

@@ -56,7 +56,7 @@ export default function Services() {
             <span className="italic text-brand-teal">te quitan el sueño.</span>
           </h2>
           <p className="mt-6 text-lg text-brand-dark/70 leading-relaxed">
-            Si sientes que tu empresa está lista para el siguiente paso pero no sabes por dónde empezar, estás en el lugar correcto. Te acompañamos en tres frentes.
+            Trabajamos con empresas de distintas industrias —servicios, industria, agro, logística, comercio y operaciones complejas— en todo Chile. Si la tuya está lista para el siguiente paso pero no sabes por dónde empezar, te acompañamos en tres frentes.
           </p>
         </div>
 
