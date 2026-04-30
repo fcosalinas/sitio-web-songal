@@ -74,10 +74,10 @@ export default function Contact() {
               </div>
               <div>
                 <dt className="marker-num text-brand-gray-500 uppercase mb-1">
-                  Modalidad
+                  Cobertura
                 </dt>
                 <dd className="text-xl font-display text-brand-dark">
-                  Atención remota y presencial
+                  Todo Chile · Atención remota y presencial
                 </dd>
               </div>
             </dl>

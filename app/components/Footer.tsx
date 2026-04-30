@@ -21,7 +21,7 @@ export default function Footer() {
               className="h-9 w-auto"
             />
             <p className="mt-6 max-w-md text-white/70 leading-relaxed">
-              Tu socio en transformación digital. Consultoría, automatización e IA para empresas que quieren crecer con tecnología bien hecha.
+              Consultoría tecnológica y analítica para empresas en todo Chile. Datos, automatización, IA y software a medida para distintas industrias —servicios, industria, agro, logística, comercio y operaciones complejas.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>www.surmetric.cl</li>
-              <li>Sur de Chile · Atención remota y presencial</li>
+              <li>Cobertura nacional · Atención remota y presencial</li>
               <li className="pt-3 text-sm text-white/60">
                 Producto propio: Surdat — Business Intelligence
               </li>

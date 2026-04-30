@@ -21,17 +21,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Surmetric — Tecnología que impulsa negocios",
+  title: "Surmetric — Consultoría tecnológica y analítica en todo Chile",
   description:
-    "Hacemos que la tecnología trabaje para ti, no al revés. Modernización, automatización e IA para empresas que quieren crecer sin complicaciones.",
+    "Consultoría tecnológica y analítica para empresas en todo Chile. Datos, automatización, IA y software a medida para servicios, industria, agro, logística, comercio y operaciones complejas.",
   keywords: [
     "consultoría tecnológica",
+    "consultoría analítica",
     "automatización",
     "inteligencia artificial",
-    "Symdat",
+    "Surdat",
     "BI",
+    "Big Data",
     "Surmetric",
     "transformación digital",
+    "software a medida",
     "Chile",
   ],
   authors: [{ name: "Surmetric SpA" }],
@@ -51,9 +54,9 @@ export const metadata: Metadata = {
   },
   themeColor: "#00968E",
   openGraph: {
-    title: "Surmetric — Tecnología que impulsa negocios",
+    title: "Surmetric — Consultoría tecnológica y analítica en todo Chile",
     description:
-      "Hacemos que la tecnología trabaje para ti, no al revés. Sin humo, sin tecnicismos.",
+      "Datos, automatización, IA y software a medida para empresas chilenas de distintas industrias. Tecnología aplicada, cercana y accionable.",
     type: "website",
     locale: "es_CL",
     siteName: "Surmetric",
