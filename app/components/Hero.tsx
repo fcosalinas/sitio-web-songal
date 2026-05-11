@@ -49,15 +49,15 @@ export default function Hero() {
           </div>
 
           {/* Etiquetas: Modernización · Automatización · IA */}
-          <div className="mt-16 flex flex-wrap items-center gap-x-8 gap-y-3 animate-fade-up delay-400">
-            <div className="h-px w-12 bg-brand-teal" aria-hidden />
+          <div className="mt-16 flex flex-nowrap items-center gap-x-2 sm:gap-x-8 gap-y-3 animate-fade-up delay-400">
+            <div className="hidden sm:block h-px w-12 bg-brand-teal shrink-0" aria-hidden />
             {["Modernización", "Automatización", "IA"].map((tag, i) => (
               <span
                 key={tag}
-                className="marker-num uppercase text-brand-dark/60"
+                className="marker-num uppercase text-brand-dark/60 whitespace-nowrap"
               >
                 {tag}
-                {i < 2 && <span className="ml-8 text-brand-gray-300" aria-hidden>·</span>}
+                {i < 2 && <span className="ml-2 sm:ml-8 text-brand-gray-300" aria-hidden>·</span>}
               </span>
             ))}
           </div>
