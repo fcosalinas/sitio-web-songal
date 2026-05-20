@@ -97,13 +97,6 @@ export default function Services() {
                 </ul>
               </div>
 
-              {/* Indicador a la derecha */}
-              <div
-                className="absolute right-0 top-1/2 -translate-y-1/2 text-brand-gray-300 group-hover:text-brand-teal group-hover:translate-x-1 transition-all duration-500 hidden lg:block"
-                aria-hidden
-              >
-                →
-              </div>
             </article>
           ))}
         </div>
