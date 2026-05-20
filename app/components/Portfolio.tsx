@@ -26,7 +26,7 @@ const PROJECTS: Project[] = [
   {
     title: "Plataforma Ganadera",
     tag: "Producción lechera",
-    desc: "Métricas de producción y costos del rodeo en tiempo real.",
+    desc: "Métricas de producción y costos del plantel lechero en tiempo real.",
     src: "/portfolio/plataforma-ganadera.png",
   },
   {
