@@ -8,6 +8,7 @@ type Project = {
   tag: string;
   desc: string;
   src: string;
+  href?: string;
 };
 
 const PROJECTS: Project[] = [
@@ -22,6 +23,13 @@ const PROJECTS: Project[] = [
     tag: "Marketplace B2B",
     desc: "Plataforma multi-rol para conectar proveedores y clientes.",
     src: "/portfolio/projecthub.png",
+  },
+  {
+    title: "Akili",
+    tag: "Geointeligencia satelital",
+    desc: "Identificación satelital de árboles con riesgo eléctrico para distribuidoras.",
+    src: "/portfolio/akili.png",
+    href: "https://akili.surmetric.cl",
   },
   {
     title: "Plataforma Ganadera",
@@ -164,6 +172,17 @@ export default function Portfolio() {
               <p className="mt-1 text-brand-dark/70 leading-relaxed">
                 {selected.desc}
               </p>
+              {selected.href && (
+                <a
+                  href={selected.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-brand-teal px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-dark"
+                >
+                  Visitar sitio
+                  <ArrowIcon />
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -177,6 +196,20 @@ function ExpandIcon() {
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
       <path
         d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M7 17L17 7M17 7H8M17 7v9"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
