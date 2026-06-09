@@ -1,7 +1,12 @@
 import WhatsAppMenu from "./WhatsAppMenu";
 
-const WA_LINK =
-  "https://wa.me/56984184979?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios";
+const WA_TEXT =
+  "Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios";
+
+const CONTACTS = [
+  { name: "Francisco Salinas", display: "+56 9 8418 4979", number: "56984184979" },
+  { name: "Alfredo Songer", display: "+56 9 9509 4992", number: "56995094992" },
+];
 
 export default function Contact() {
   return (
@@ -36,16 +41,24 @@ export default function Contact() {
                 <dt className="marker-num text-brand-gray-500 uppercase mb-1">
                   WhatsApp
                 </dt>
-                <dd>
-                  <a
-                    href={WA_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xl font-display text-brand-dark hover:text-[#25D366] transition-colors link-underline"
-                  >
-                    <WhatsAppIcon />
-                    +56 9 8418 4979
-                  </a>
+                <dd className="space-y-2">
+                  {CONTACTS.map((c) => (
+                    <a
+                      key={c.number}
+                      href={`https://wa.me/${c.number}?text=${WA_TEXT}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-xl font-display text-brand-dark hover:text-[#25D366] transition-colors link-underline"
+                    >
+                      <WhatsAppIcon />
+                      <span>
+                        {c.display}
+                        <span className="block text-sm font-normal text-brand-dark/50">
+                          {c.name}
+                        </span>
+                      </span>
+                    </a>
+                  ))}
                 </dd>
               </div>
 
@@ -54,12 +67,24 @@ export default function Contact() {
                 <dt className="marker-num text-brand-gray-500 uppercase mb-1">
                   Email
                 </dt>
-                <dd>
+                <dd className="space-y-1">
                   <a
                     href="mailto:contacto@surmetric.cl"
-                    className="text-base text-brand-dark/60 hover:text-brand-teal transition-colors"
+                    className="block text-base text-brand-dark/60 hover:text-brand-teal transition-colors"
                   >
                     contacto@surmetric.cl
+                  </a>
+                  <a
+                    href="mailto:francisco.salinas@surmetric.cl"
+                    className="block text-base text-brand-dark/60 hover:text-brand-teal transition-colors"
+                  >
+                    francisco.salinas@surmetric.cl
+                  </a>
+                  <a
+                    href="mailto:alfredo.songer@surmetric.cl"
+                    className="block text-base text-brand-dark/60 hover:text-brand-teal transition-colors"
+                  >
+                    alfredo.songer@surmetric.cl
                   </a>
                 </dd>
               </div>

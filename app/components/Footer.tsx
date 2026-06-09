@@ -56,6 +56,22 @@ export default function Footer() {
                   contacto@surmetric.cl
                 </a>
               </li>
+              <li>
+                <a
+                  href="mailto:francisco.salinas@surmetric.cl"
+                  className="hover:text-brand-teal transition-colors link-underline"
+                >
+                  francisco.salinas@surmetric.cl
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:alfredo.songer@surmetric.cl"
+                  className="hover:text-brand-teal transition-colors link-underline"
+                >
+                  alfredo.songer@surmetric.cl
+                </a>
+              </li>
               <li>www.surmetric.cl</li>
               <li>Cobertura nacional · Atención remota y presencial</li>
               <li className="pt-3 text-sm text-white/60">
