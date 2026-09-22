@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { WA_DISPLAY, buildWaLink } from "./contact-info";
 
 const NAV = [
   { href: "#propuesta", label: "Propuesta" },
@@ -58,18 +59,12 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:francisco.salinas@surmetric.cl"
+                  href={buildWaLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-brand-teal transition-colors link-underline"
                 >
-                  francisco.salinas@surmetric.cl
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:alfredo.songer@surmetric.cl"
-                  className="hover:text-brand-teal transition-colors link-underline"
-                >
-                  alfredo.songer@surmetric.cl
+                  WhatsApp {WA_DISPLAY}
                 </a>
               </li>
               <li>www.surmetric.cl</li>

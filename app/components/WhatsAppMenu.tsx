@@ -1,4 +1,4 @@
-const WA_NUMBER = "56984184979";
+import { buildWaLink } from "./contact-info";
 
 const INTENTS = [
   {
@@ -35,10 +35,6 @@ const INTENTS = [
     waText: "Hola, tengo una consulta que quisiera hacerles. ¿Pueden orientarme?",
   },
 ];
-
-function buildWaLink(text: string): string {
-  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
-}
 
 export default function WhatsAppMenu() {
   return (
