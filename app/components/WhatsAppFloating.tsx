@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-const WA_LINK =
-  "https://wa.me/56984184979?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios";
+import { buildWaLink } from "./contact-info";
+
+const WA_LINK = buildWaLink();
 
 export default function WhatsAppFloating() {
   const [hidden, setHidden] = useState(false);

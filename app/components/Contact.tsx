@@ -1,12 +1,5 @@
 import WhatsAppMenu from "./WhatsAppMenu";
-
-const WA_TEXT =
-  "Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios";
-
-const CONTACTS = [
-  { name: "Francisco Salinas", display: "+56 9 8418 4979", number: "56984184979" },
-  { name: "Alfredo Songer", display: "+56 9 9509 4992", number: "56995094992" },
-];
+import { CONTACT_EMAIL, WA_DISPLAY, buildWaLink } from "./contact-info";
 
 export default function Contact() {
   return (
@@ -41,24 +34,16 @@ export default function Contact() {
                 <dt className="marker-num text-brand-gray-500 uppercase mb-1">
                   WhatsApp
                 </dt>
-                <dd className="space-y-2">
-                  {CONTACTS.map((c) => (
-                    <a
-                      key={c.number}
-                      href={`https://wa.me/${c.number}?text=${WA_TEXT}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-xl font-display text-brand-dark hover:text-[#25D366] transition-colors link-underline"
-                    >
-                      <WhatsAppIcon />
-                      <span>
-                        {c.display}
-                        <span className="block text-sm font-normal text-brand-dark/50">
-                          {c.name}
-                        </span>
-                      </span>
-                    </a>
-                  ))}
+                <dd>
+                  <a
+                    href={buildWaLink()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-xl font-display text-brand-dark hover:text-[#25D366] transition-colors link-underline"
+                  >
+                    <WhatsAppIcon />
+                    <span>{WA_DISPLAY}</span>
+                  </a>
                 </dd>
               </div>
 
@@ -67,24 +52,12 @@ export default function Contact() {
                 <dt className="marker-num text-brand-gray-500 uppercase mb-1">
                   Email
                 </dt>
-                <dd className="space-y-1">
+                <dd>
                   <a
-                    href="mailto:contacto@surmetric.cl"
-                    className="block text-base text-brand-dark/60 hover:text-brand-teal transition-colors"
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="block text-xl font-display text-brand-dark hover:text-brand-teal transition-colors link-underline"
                   >
-                    contacto@surmetric.cl
-                  </a>
-                  <a
-                    href="mailto:francisco.salinas@surmetric.cl"
-                    className="block text-base text-brand-dark/60 hover:text-brand-teal transition-colors"
-                  >
-                    francisco.salinas@surmetric.cl
-                  </a>
-                  <a
-                    href="mailto:alfredo.songer@surmetric.cl"
-                    className="block text-base text-brand-dark/60 hover:text-brand-teal transition-colors"
-                  >
-                    alfredo.songer@surmetric.cl
+                    {CONTACT_EMAIL}
                   </a>
                 </dd>
               </div>
