@@ -70,7 +70,14 @@ export default function Footer() {
               <li>www.surmetric.cl</li>
               <li>Cobertura nacional · Atención remota y presencial</li>
               <li className="pt-3 text-sm text-white/60">
-                Producto propio: Surdat — Business Intelligence
+                Productos propios: Surdat — Business Intelligence ·{" "}
+                <a
+                  href="https://yolotengo.surmetric.cl"
+                  className="hover:text-brand-teal transition-colors link-underline"
+                >
+                  YoLoTengo
+                </a>{" "}
+                — marketplace de emprendimientos
               </li>
             </ul>
           </div>

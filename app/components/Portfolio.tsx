@@ -32,6 +32,13 @@ const PROJECTS: Project[] = [
     href: "https://akili.surmetric.cl",
   },
   {
+    title: "YoLoTengo",
+    tag: "Producto propio · Marketplace con IA",
+    desc: "Servicio de Surmetric que conecta a emprendedores con proveedores de su región, solos o en paquetes.",
+    src: "/portfolio/yolotengo.png",
+    href: "https://yolotengo.surmetric.cl",
+  },
+  {
     title: "Plataforma Ganadera",
     tag: "Producción lechera",
     desc: "Métricas de producción y costos del plantel lechero en tiempo real.",
