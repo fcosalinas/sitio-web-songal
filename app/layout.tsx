@@ -63,6 +63,34 @@ export const metadata: Metadata = {
   },
 };
 
+// Datos estructurados: declaran a Surdat y YoLoTengo como marcas de Surmetric SpA.
+// Meta los usa para verificar la relación marca–empresa del nombre visible en WhatsApp.
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Surmetric",
+  legalName: "Surmetric SpA",
+  url: "https://surmetric.cl",
+  logo: "https://surmetric.cl/logo-lockup-full.png",
+  email: "contacto@surmetric.cl",
+  areaServed: "CL",
+  brand: [
+    {
+      "@type": "Brand",
+      name: "Surdat",
+      url: "https://surdat.surmetric.cl",
+      description:
+        "Plataforma de Business Intelligence de Surmetric, con Bitácora Comercial por WhatsApp.",
+    },
+    {
+      "@type": "Brand",
+      name: "YoLoTengo",
+      url: "https://yolotengo.surmetric.cl",
+      description: "Marketplace de emprendimientos de Surmetric.",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -73,6 +101,12 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${montserratDisplay.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         {children}
       </body>
     </html>

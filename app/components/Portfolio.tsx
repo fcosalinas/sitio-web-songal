@@ -9,6 +9,7 @@ type Project = {
   desc: string;
   src: string;
   href?: string;
+  note?: { text: string; href: string; label: string };
 };
 
 const PROJECTS: Project[] = [
@@ -17,6 +18,12 @@ const PROJECTS: Project[] = [
     tag: "BI ejecutivo",
     desc: "Indicadores y dashboards modulares para la gerencia.",
     src: "/portfolio/surdat.png",
+    href: "https://surdat.surmetric.cl",
+    note: {
+      text: "Incluye la Bitácora Comercial por WhatsApp.",
+      href: "https://surdat.surmetric.cl",
+      label: "surdat.surmetric.cl",
+    },
   },
   {
     title: "ProjectHub",
@@ -90,12 +97,15 @@ export default function Portfolio() {
 
         <ul className="mt-12 lg:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {PROJECTS.map((p) => (
-            <li key={p.title}>
+            <li
+              key={p.title}
+              className="overflow-hidden rounded-xl bg-white border border-brand-gray-100 hover:border-brand-teal transition-colors"
+            >
               <button
                 type="button"
                 onClick={() => setSelected(p)}
                 aria-label={`Ver ${p.title} en detalle`}
-                className="group relative w-full text-left overflow-hidden rounded-xl bg-white border border-brand-gray-100 hover:border-brand-teal transition-colors cursor-zoom-in"
+                className="group relative w-full text-left overflow-hidden cursor-zoom-in"
               >
                 <div className="relative aspect-[16/10] bg-brand-gray-50 overflow-hidden border-b border-brand-gray-100">
                   <Image
@@ -127,6 +137,19 @@ export default function Portfolio() {
                   </p>
                 </div>
               </button>
+              {p.note && (
+                <p className="-mt-2 px-5 pb-5 text-sm text-brand-dark/70 leading-relaxed">
+                  {p.note.text}{" "}
+                  <a
+                    href={p.note.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-brand-teal hover:text-brand-dark transition-colors link-underline"
+                  >
+                    {p.note.label}
+                  </a>
+                </p>
+              )}
             </li>
           ))}
         </ul>
@@ -179,6 +202,11 @@ export default function Portfolio() {
               <p className="mt-1 text-brand-dark/70 leading-relaxed">
                 {selected.desc}
               </p>
+              {selected.note && (
+                <p className="mt-1 text-brand-dark/70 leading-relaxed">
+                  {selected.note.text}
+                </p>
+              )}
               {selected.href && (
                 <a
                   href={selected.href}
