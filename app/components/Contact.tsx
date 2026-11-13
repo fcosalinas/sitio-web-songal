@@ -1,5 +1,5 @@
 import WhatsAppMenu from "./WhatsAppMenu";
-import { CONTACT_EMAIL, WA_DISPLAY, buildWaLink } from "./contact-info";
+import { CONTACT_EMAIL, WA_CONTACTS, buildWaLink } from "./contact-info";
 
 export default function Contact() {
   return (
@@ -34,17 +34,21 @@ export default function Contact() {
                 <dt className="marker-num text-brand-gray-500 uppercase mb-1">
                   WhatsApp
                 </dt>
-                <dd>
-                  <a
-                    href={buildWaLink()}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-xl font-display text-brand-dark hover:text-[#25D366] transition-colors link-underline"
-                  >
-                    <WhatsAppIcon />
-                    <span>{WA_DISPLAY}</span>
-                  </a>
-                </dd>
+                {WA_CONTACTS.map((c) => (
+                  <dd key={c.number} className="mt-1 first-of-type:mt-0">
+                    <a
+                      href={buildWaLink(undefined, c.number)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Escribir por WhatsApp a ${c.name}, ${c.display}`}
+                      className="flex items-center gap-2 text-xl font-display text-brand-dark hover:text-[#25D366] transition-colors link-underline"
+                    >
+                      <WhatsAppIcon />
+                      <span>{c.display}</span>
+                      <span className="text-base text-brand-dark/60">· {c.name}</span>
+                    </a>
+                  </dd>
+                ))}
               </div>
 
               {/* Email — canal secundario */}

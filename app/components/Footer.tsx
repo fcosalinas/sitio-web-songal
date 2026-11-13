@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { WA_DISPLAY, buildWaLink } from "./contact-info";
+import { WA_CONTACTS, buildWaLink } from "./contact-info";
 
 const NAV = [
   { href: "#propuesta", label: "Propuesta" },
@@ -57,16 +57,18 @@ export default function Footer() {
                   contacto@surmetric.cl
                 </a>
               </li>
-              <li>
-                <a
-                  href={buildWaLink()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-brand-teal transition-colors link-underline"
-                >
-                  WhatsApp {WA_DISPLAY}
-                </a>
-              </li>
+              {WA_CONTACTS.map((c) => (
+                <li key={c.number}>
+                  <a
+                    href={buildWaLink(undefined, c.number)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-brand-teal transition-colors link-underline"
+                  >
+                    WhatsApp {c.display} · {c.name}
+                  </a>
+                </li>
+              ))}
               <li>www.surmetric.cl</li>
               <li>Cobertura nacional · Atención remota y presencial</li>
               <li className="pt-3 text-sm text-white/60">
