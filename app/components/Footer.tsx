@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { WA_CONTACTS, buildWaLink } from "./contact-info";
 
 const NAV = [
-  { href: "#propuesta", label: "Propuesta" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#diferenciadores", label: "Por qué nosotros" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#propuesta", label: "Propuesta" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#diferenciadores", label: "Por qué nosotros" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export default function Footer() {
@@ -33,12 +34,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {NAV.map((l) => (
                 <li key={l.href}>
-                  <a
+                  <Link
                     href={l.href}
                     className="text-white/80 hover:text-brand-teal transition-colors"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
