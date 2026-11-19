@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
-  { href: "#propuesta", label: "Propuesta" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#diferenciadores", label: "Por qué nosotros" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#propuesta", label: "Propuesta" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#diferenciadores", label: "Por qué nosotros" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export default function Header() {
@@ -31,7 +32,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <a href="#" className="flex items-center" aria-label="Surmetric — Inicio">
+          <Link href="/" className="flex items-center" aria-label="Surmetric — Inicio">
             <Image
               src="/logo-lockup-full.png"
               alt="Surmetric"
@@ -40,28 +41,28 @@ export default function Header() {
               className="h-8 lg:h-9 w-auto"
               priority
             />
-          </a>
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 className="text-sm font-medium text-brand-dark/80 hover:text-brand-teal transition-colors link-underline"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="hidden lg:block">
-            <a
-              href="#contacto"
+            <Link
+              href="/#contacto"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-dark text-white text-sm font-medium rounded-full hover:bg-brand-teal transition-all duration-300 hover:gap-3"
             >
               Conversemos
               <span aria-hidden>→</span>
-            </a>
+            </Link>
           </div>
 
           <button
@@ -93,22 +94,22 @@ export default function Header() {
           <div className="lg:hidden pb-6 pt-2 animate-fade-in">
             <nav className="flex flex-col gap-1">
               {NAV_LINKS.map((l) => (
-                <a
+                <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
                   className="px-3 py-3 text-base font-medium text-brand-dark hover:bg-brand-gray-50 rounded-lg transition"
                 >
                   {l.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#contacto"
+              <Link
+                href="/#contacto"
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 px-3 py-3 text-base font-medium bg-brand-dark text-white rounded-lg text-center"
               >
                 Conversemos →
-              </a>
+              </Link>
             </nav>
           </div>
         )}
